@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Other meta tags and styles for your website -->
+
+    <!-- Add the following scripts for Azure Web Chat -->
+    <script src="https://cdn.botframework.com/botframework-webchat/latest/webchat.js"></script>
+    <style>
+        #webchat {
+            height: 500px; /* Adjust the height to your preference */
+        }
+    </style>
+</head>
+<body>
+    <!-- Your website content -->
+    <!-- Add the div to hold the chatbot -->
+    <div id="webchat"></div>
+
+    <!-- Script to set up the Web Chat control -->
+    <script>
+        (async function() {
+            const response = await fetch('https://directline.botframework.com/v3/directline/tokens/generate', {
+                method: 'POST',
+                headers: {
+                    'Authorization': 'Bearer YOUR_DIRECT_LINE_SECRET' // Replace with your Direct Line secret from Azure
+                }
+            });
+            const { token } = await response.json();
+
+            // Initialize Web Chat
+            window.WebChat.renderWebChat({
+                directLine: window.WebChat.createDirectLine({ token }),
+                userID: 'YOUR_USER_ID' // Replace with a unique user ID for your bot (e.g., a user ID from your website's authentication system)
+            }, document.getElementById('webchat'));
+        })();
+    </script>
+</body>
+</html>
