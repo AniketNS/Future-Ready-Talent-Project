@@ -7,7 +7,7 @@
     <script src="https://cdn.botframework.com/botframework-webchat/latest/webchat.js"></script>
     <style>
         #webchat {
-            height: 500px; /* Adjust the height to your preference */
+            height: 250px; /* Adjust the height to your preference */
         }
     </style>
 </head>
@@ -22,7 +22,7 @@
             const response = await fetch('https://directline.botframework.com/v3/directline/tokens/generate', {
                 method: 'POST',
                 headers: {
-                    'Authorization': 'Bearer YOUR_DIRECT_LINE_SECRET' // Replace with your Direct Line secret from Azure
+                    'Authorization': 'Bearer OIq5x4xfRwQ.JWYhhpdmOoV0X_SFkYEuckEK7pML6YDzAdbj23s6sxE' // Replace with your Direct Line secret from Azure
                 }
             });
             const { token } = await response.json();
@@ -30,7 +30,7 @@
             // Initialize Web Chat
             window.WebChat.renderWebChat({
                 directLine: window.WebChat.createDirectLine({ token }),
-                userID: 'YOUR_USER_ID' // Replace with a unique user ID for your bot (e.g., a user ID from your website's authentication system)
+                userID: 'AniketNS' // Replace with a unique user ID for your bot (e.g., a user ID from your website's authentication system)
             }, document.getElementById('webchat'));
         })();
     </script>
