@@ -17,4 +17,7 @@ Azure link - https://blue-plant-0de02c210.3.azurestaticapps.net
 # Testimonial
 ![image](https://github.com/AniketNS/Future-Ready-Talent-Project/assets/91371143/aeaab5d8-9765-44a1-8b31-9b63d10eb86f)
 
+# Project Demo Video
+https://github.com/AniketNS/Future-Ready-Talent-Project/assets/91371143/3345436c-5aa4-4fd7-8939-ff28be3b4e89
+
 
